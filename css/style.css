@@ -1,0 +1,37 @@
+:root{--navy:#232B45;--cu:#C98760;--cu-d:#88512e;--rose:#D8B4B8;--cream:#F4EFEA;--sand:#E8E0D7;--ink:#1d1b19;--mut:#45464d;--ok:#2e7d4f;--err:#ba1a1a;
+--glass:rgba(255,255,255,.72);--r:20px;--serif:'Newsreader',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;--mono:'JetBrains Mono',monospace}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{min-height:100%}
+body{font:400 14px/22px var(--sans);color:var(--ink);background:radial-gradient(circle at 15% 0%,#ffe3d1 0,transparent 45%),radial-gradient(circle at 100% 20%,#ead6e0 0,transparent 40%),#fef8f3;background-attachment:fixed;padding-top:env(safe-area-inset-top)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--navy);letter-spacing:-.01em}
+h1{font-size:30px;line-height:38px}h2{font-size:22px;line-height:28px}h3{font-size:18px;line-height:24px;font-weight:600}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.04em}.mut{color:var(--mut)}.cu{color:var(--cu-d)}.sm{font-size:12px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px 120px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:960px;margin:0 auto}
+.brand{display:flex;gap:10px;align-items:center}.logo{width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--cu);display:grid;place-items:center;font-size:18px}
+.glass{background:var(--glass);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.6);border-radius:var(--r);box-shadow:0 8px 32px -4px rgba(35,43,69,.05);padding:20px;margin-bottom:16px}
+.row{display:flex;gap:10px;align-items:center}.sp{justify-content:space-between}.wr{flex-wrap:wrap}.g{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.btn{border:0;cursor:pointer;font:600 14px var(--sans);padding:12px 20px;border-radius:9999px;background:var(--navy);color:var(--cream);display:inline-flex;gap:8px;align-items:center;justify-content:center;transition:.2s}
+.btn:hover{box-shadow:0 0 0 2px var(--cu)}.btn:disabled{opacity:.5}.btn.full{width:100%;padding:15px}
+.btn.sec{background:rgba(255,255,255,.8);color:var(--navy);border:1px solid #fff}.btn.cu{background:var(--cu);color:#fff}.btn.sm{padding:7px 14px;font-size:12px}.btn.red{background:#ffdad6;color:#93000a}
+.chip{display:inline-block;padding:3px 12px;border-radius:9999px;background:rgba(244,239,234,.8);font:600 12px var(--sans);color:var(--navy);border:0;cursor:pointer}
+.chip.on{background:var(--navy);color:#fff}.tag{background:#ffdbc9;color:var(--cu-d)}.live{background:var(--navy);color:#fff}.okc{background:#dff0e4;color:var(--ok)}.bad{background:#ffdad6;color:#93000a}
+input,select,textarea{width:100%;font:400 14px var(--sans);padding:12px;border-radius:12px;border:1px solid rgba(35,43,69,.12);background:rgba(255,255,255,.6);color:var(--ink);outline:0}
+input:focus,select:focus,textarea:focus{border-color:var(--cu)}label{display:block;font-weight:600;font-size:12px;margin:12px 0 4px}
+.ring{--p:0;width:72px;height:72px;border-radius:50%;background:conic-gradient(var(--cu) calc(var(--p)*1%),var(--sand) 0);display:grid;place-items:center;margin:0 auto 6px}
+.ring b{width:56px;height:56px;border-radius:50%;background:#fffaf6;display:grid;place-items:center;font:500 12px var(--mono)}
+.ctr{text-align:center}.nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--navy);border-radius:28px 28px 0 0;display:flex;justify-content:space-around;padding:10px 6px calc(10px + env(safe-area-inset-bottom));max-width:960px;margin:0 auto}
+.nav a{color:#8a92b1;text-decoration:none;font:600 11px var(--sans);display:flex;flex-direction:column;align-items:center;gap:2px;min-width:56px}.nav a i{font-style:normal;font-size:20px}.nav a.on{color:var(--cu)}
+.nav a.mid{margin-top:-32px}.nav a.mid i{background:var(--cu);color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 20px rgba(201,135,96,.45);border:4px solid var(--navy)}
+.item{padding:14px 0;border-bottom:1px solid rgba(35,43,69,.07)}.item:last-child{border:0}
+table{width:100%;border-collapse:collapse;font-size:13px}th{text-align:left;font:600 11px var(--mono);color:var(--mut);padding:8px;text-transform:uppercase}td{padding:10px 8px;border-top:1px solid rgba(35,43,69,.07);vertical-align:top}.tw{overflow-x:auto}
+.cam{position:relative;border-radius:var(--r);overflow:hidden;background:var(--navy);aspect-ratio:3/4;max-height:420px;margin:12px 0}.cam video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}.cam.back video{transform:none}
+.cam:after{content:"";position:absolute;inset:14% 18%;border:2px dashed var(--cu);border-radius:50%;opacity:.8;pointer-events:none}.cam.back:after{border-radius:16px}
+#loading{display:none;position:fixed;inset:0;background:rgba(254,248,243,.6);z-index:90;align-items:center;justify-content:center}.spin{width:42px;height:42px;border:4px solid var(--sand);border-top-color:var(--cu);border-radius:50%;animation:s 1s linear infinite}@keyframes s{to{transform:rotate(360deg)}}
+#modal{display:none;position:fixed;inset:0;background:rgba(35,43,69,.45);z-index:50;align-items:flex-end;justify-content:center}#modal.show{display:flex}.sheet{width:100%;max-width:560px;max-height:92vh;overflow:auto;background:#fffaf6;border-radius:24px 24px 0 0;margin:0}
+#toast{position:fixed;left:50%;top:18px;transform:translate(-50%,-90px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:9999px;z-index:99;transition:.3s;max-width:92vw;text-align:center}#toast.show{transform:translate(-50%,0)}#toast.err{background:var(--err)}
+.hero{background:var(--navy);color:var(--cream);border-radius:var(--r);padding:20px;margin-bottom:16px}.hero h3,.hero h2{color:#fff}
+.login{max-width:420px;margin:0 auto;padding:36px 20px}.err-box{background:#ffdad6;color:#93000a;border-radius:12px;padding:12px;margin:12px 0}
+.bar{height:10px;border-radius:9px;background:var(--cu);min-width:3px}.sheet-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+@media(min-width:900px){.sheet{border-radius:24px;margin:auto}#modal{align-items:center}}
